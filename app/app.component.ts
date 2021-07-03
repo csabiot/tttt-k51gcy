@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AsyncExerciseComponent } from './async-exercise/components/async-exercise.component';
 
 @Component({
   selector: 'my-app',

@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-
 import { Observable } from 'rxjs/Rx';
-import { AsyncExerciseService } from '../services/async-exercise.service';
 
 @Component({
   selector: 'async-exercise',
@@ -14,5 +12,5 @@ export class AsyncExerciseComponent {
 
   elements = ['some', 'elements'];
 
-  constructor(private service: AsyncExerciseService) {}
+  constructor() {}
 }
