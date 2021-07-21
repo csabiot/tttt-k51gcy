@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
+import { AsyncExerciseService } from '../services/async-exercise.service';
 
 @Component({
   selector: 'async-exercise',
@@ -11,6 +12,9 @@ export class AsyncExerciseComponent {
   observable: Observable<number>;
 
   elements = ['some', 'elements'];
+  resultPromise: string;
 
-  constructor() {}
+  constructor(asyncService: AsyncExerciseService) {
+    asyncService.getPromise().then(result => this.resultPromise = result.toUpperCase())
+  }
 }
